@@ -38,6 +38,9 @@
     editor = { {{- tags.editor -}} },
     publisher = { {{- tags.publisher -}} },
 {%- endif %}
+{%- if tags.doi %}
+    doi = { {{- tags.doi -}} },
+{%- endif %}
 }</code></pre>
       </details><br>
     {% for author in tags.author | split(pat=" and ") %}
