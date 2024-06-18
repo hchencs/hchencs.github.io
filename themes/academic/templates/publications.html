@@ -6,14 +6,14 @@
     <a name="{{ entry.citation_key }}"></a>
     <strong>{{ tags.title | replace(from="{", to="") | replace(from="}", to="") }}</strong>
     {% if not tags.nopdf %}
-      <a href="/publications/{{ entry.citation_key | lower }}.pdf"><img src="/img/pdf.svg" alt="PDF"></a> 
+      <a href="/publications/{{ entry.citation_key | lower }}.pdf"><img src="/img/pdf.svg" title="PDF"></a> 
     {% endif %}
     {% if tags.doi %}
-      <a href="{{ tags.doi }}"><img src="/img/doi.svg" alt="DOI" width="32"></a>
+      <a href="{{ tags.doi }}"><img src="/img/doi.svg" title="DOI" width="32"></a>
     {% endif %}
     {% if tags.addendum %}
       {% if tags.addendum | lower == "best paper award" %}
-        <img width="32" src="/img/award.svg" alt="Best paper award">
+        <img width="32" src="/img/award.svg" title="Best paper award">
       {% endif %}
     {% endif %}
     <details class="bibtex">
