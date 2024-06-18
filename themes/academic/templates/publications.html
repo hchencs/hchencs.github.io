@@ -3,6 +3,7 @@
 {% macro print_entry(entry) %}  
   {% set tags = entry.tags %}
   <li class="publist-item">
+    <a name="{{ entry.citation_key }}"></a>
     <strong>{{ tags.title | replace(from="{", to="") | replace(from="}", to="") }}</strong>
     {% if not tags.nopdf %}
       &nbsp; <a href="/publications/{{ entry.citation_key | lower }}.pdf"><img src="/img/pdf.svg"></a> 

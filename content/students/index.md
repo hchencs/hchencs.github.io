@@ -3,6 +3,8 @@ title = "Students"
 page_template = "page.html"
 +++
 
+I am recruiting doctoral students, postdocs, and research scientists.
+
 ## Resources
 ### Technical writing
 - [The Mayfield Handbook of Technical & Scientific Writing](https://www.mit.edu/course/21/21.guide/toc.htm)

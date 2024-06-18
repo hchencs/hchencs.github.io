@@ -175,12 +175,12 @@ paths_keep_dates = true
 author = "Chen, Hao"
 # institution = ""
 role = "Professor"
-email = "hchencs@gmail.com"
+email = "hchencs AT gmail.com"
 
 social_buttons = [
-    {link = "mailto:$EMAIL_ADDRESS", name = "Email"},
-    {link = "https://github.com/hchencs", name = "GitHub"},
+    # {link = "mailto:$EMAIL_ADDRESS", name = "Email"},
     {link = "https://scholar.google.com/citations?user=1Aa3qxIAAAAJ", name = "GoogleScholar"},
+    {link = "https://github.com/hchencs", name = "GitHub"},
 ]
 
 # trailing slashes are needed for the aria-current page in header.html to work

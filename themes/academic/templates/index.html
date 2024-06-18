@@ -13,10 +13,11 @@
         {% endif %}
         <div>
           <h2>{{ config.author }}</h2>
-          <h3>{{ config.extra.role }}</h3>
+          <p>{{ config.extra.role }}</p>
           {% if config.extra.institution %}
             <h3>{{ config.extra.institution }}</h3>
           {% endif %}
+          <p>{{ config.extra.email }}</p>
         </div>
         <ul class="network">
           {{macros::render_social_icons()}}
