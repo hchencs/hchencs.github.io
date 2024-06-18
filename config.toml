@@ -175,6 +175,10 @@ paths_keep_dates = true
 author = "Chen, Hao"
 # institution = ""
 role = "Professor"
+memberships = [
+    { link="https://www.ieee.org/membership/fellows/index.html", name="IEEE fellow" },
+    { link="https://awards.acm.org/distinguished-members", name="ACM distinghished member" },
+]
 email = "hchencs AT gmail.com"
 
 social_buttons = [

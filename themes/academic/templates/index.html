@@ -13,9 +13,21 @@
         {% endif %}
         <div>
           <h2>{{ config.author }}</h2>
-          <p>{{ config.extra.role }}</p>
-          {% if config.extra.institution %}
-            <h3>{{ config.extra.institution }}</h3>
+          <p>
+            {{ config.extra.role }}
+            {% if config.extra.institution %}
+              <br>{{ config.extra.institution }}
+            {% endif %}
+          </p>
+          {% if config.extra.memberships %}
+            <p>
+            {% for membership in config.extra.memberships %}
+              <a href="{{ membership.link }}">{{ membership.name }}</a>
+              {% if not loop.last %}
+                <br>
+              {% endif %}
+            {% endfor %}
+            </p>
           {% endif %}
           <p>{{ config.extra.email }}</p>
         </div>
