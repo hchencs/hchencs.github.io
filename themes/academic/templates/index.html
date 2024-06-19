@@ -29,11 +29,9 @@
             {% endfor %}
             </p>
           {% endif %}
-          {{ config.extra.email }}
+          <p>{{ config.extra.email }}</p>
+          <p>{{macros::render_social_icons()}}</p>
         </div>
-        <ul class="network">
-          {{macros::render_social_icons()}}
-        </ul>
       </div>
     </div>
     <div class="col col-lg-8">
