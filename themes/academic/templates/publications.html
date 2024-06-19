@@ -97,7 +97,10 @@
     </h1> -->
     {% set data = load_data(path="content/publications/paper.bib", format="bibtex") %}
     <h2>
-      In conference proceedings (<a href="#article">journals</a> <a href="#inbook">books</a> <a href="#misc">preprints</a>)
+      In conference proceedings 
+      [<a href="#article">journals</a>]
+      [<a href="#inbook">books</a>]
+      [<a href="#misc">preprints</a>]
     </h2>
     <ul class="publist">
     {% for entry in data.bibliographies %}
