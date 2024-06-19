@@ -6,4 +6,4 @@ My research focuses on computer security. I am interested in a broad range of se
 - AI-driven security: [DNS 2024](/publications/#lin2024IDS)
 - Software security: [CCS 2024](/publications/#lyu2024PromptFuzz) [CCS 2023](/publications/#chen2023Hopper) [ACL 2023](/publications/#zhao2023)
 
-I have open positions for graduate students, postdoctoral reseachers, and research scientists.
+Open positions for graduate students, postdoctoral reseachers, and research scientists are available.

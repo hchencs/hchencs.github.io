@@ -83,6 +83,8 @@
       {% endif %}
     {% elif entry.entry_type == "inbook" %}
       In <i>{{ tags.booktitle | replace(from="\", to="") }}</i>, pp. {{ tags.pages | replace(from="--", to="&ndash;") | safe }}. {{ tags.publisher }}, {{ tags.year }}
+    {% elif entry.entry_type == "misc" %}
+      {{ tags.year }}
     {% endif %}
   <li>
 {% endmacro %}
@@ -95,7 +97,7 @@
     </h1> -->
     {% set data = load_data(path="content/publications/paper.bib", format="bibtex") %}
     <h2>
-      In conference proceedings
+      In conference proceedings (<a href="#article">journals</a> <a href="#inbook">books</a> <a href="#misc">preprints</a>)
     </h2>
     <ul class="publist">
     {% for entry in data.bibliographies %}
@@ -104,9 +106,7 @@
       {% endif %}
     {% endfor %}
     </ul>
-    <h2>
-      In journals
-    </h2>
+    <a name="article"></a><h2>In journals</h2>
     <ul class="publist">
     {% for entry in data.bibliographies %}
       {% if entry.entry_type == "article" %}
@@ -114,12 +114,18 @@
       {% endif %}
     {% endfor %}
     </ul>
-    <h2>
-      Book chapters
-    </h2>
+    <a name="inbook"></a><h2>Book chapters</h2>
     <ul class="publist">
     {% for entry in data.bibliographies %}
       {% if entry.entry_type == "inbook" %}
+        {{ self::print_entry(entry=entry) }}
+      {% endif %}
+    {% endfor %}
+    </ul>
+    <a name="misc"></a><h2>Preprints</h2>
+    <ul class="publist">
+    {% for entry in data.bibliographies %}
+      {% if entry.entry_type == "misc" %}
         {{ self::print_entry(entry=entry) }}
       {% endif %}
     {% endfor %}
