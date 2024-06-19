@@ -96,12 +96,8 @@
       {{ section.title }}
     </h1> -->
     {% set data = load_data(path="content/publications/paper.bib", format="bibtex") %}
-    <h2>
-      In conference proceedings 
-      [<a href="#article">journals</a>]
-      [<a href="#inbook">books</a>]
-      [<a href="#misc">preprints</a>]
-    </h2>
+    <h2>Conferences</h2>
+    <p>Jump to <a href="#article">journals</a>, <a href="#inbook">books</a>, <a href="#misc">preprints</a></p>
     <ul class="publist">
     {% for entry in data.bibliographies %}
       {% if entry.entry_type == "inproceedings" %}
@@ -109,7 +105,7 @@
       {% endif %}
     {% endfor %}
     </ul>
-    <a name="article"></a><h2>In journals</h2>
+    <a name="article"></a><h2>Journals</h2>
     <ul class="publist">
     {% for entry in data.bibliographies %}
       {% if entry.entry_type == "article" %}
