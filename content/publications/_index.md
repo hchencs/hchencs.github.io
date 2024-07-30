@@ -1,5 +1,5 @@
 +++
 title = "Publications"
 template = "publications.html"
-generate_feed = false
+generate_feeds = false
 +++
