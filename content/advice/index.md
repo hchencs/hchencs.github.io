@@ -3,6 +3,12 @@ title = "Students"
 page_template = "page.html"
 +++
 
+## Advice
+
+Common advice that I give students on
+- [Writing](writing)
+- [LaTeX](latex)
+
 ## Resources
 ### Technical writing
 - [The Mayfield Handbook of Technical & Scientific Writing](https://www.mit.edu/course/21/21.guide/toc.htm)
