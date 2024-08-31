@@ -389,7 +389,7 @@ article h2:first-child {
 }
 
 section {
-  padding: 2rem 1rem;
+  padding: 0rem 0rem;
 }
 
 /* Don't double separators when chaining sections */
@@ -757,7 +757,7 @@ abbr[title] {
 }
 
 .publist-item {
-  margin-bottom: 1.8rem;
+  margin-bottom: 0.5rem;
   background-color: var(--bg-darker);
   padding: 1rem;
   border-radius: 20px;

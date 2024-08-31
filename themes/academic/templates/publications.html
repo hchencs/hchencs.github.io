@@ -49,21 +49,21 @@
 }</code></pre>
       </details><br>
     {% for author in tags.author | split(pat=" and ") %}
-      {%- set name = author | split(pat=",") -%}
-      {% set firstname = name.1 | default(value="") %}
-      {%- set author = firstname ~ " " ~ name.0  | trim %}
       {%- if not loop.first -%}
         {%- if not loop.last or loop.index0 != 1 -%}
         ,
         {% endif %}
         {% if loop.last %}
-        and
+        &amp;
         {% endif %}
       {% endif %}
+      {%- set name = author | split(pat=",") -%}
+      {%- set initial = name.1 | default(value="") | truncate(length=2, end="") -%}
+      {%- set author_str = name.0 ~ "," ~ initial ~ "." | trim %}
       {% if author == config.extra.author %}
-          <strong>{{ author }}</strong>;
-      {% else %}
-        {{ author }} 
+          <strong>{{ author_str }}</strong>
+      {%- else %}
+        {{ author_str }} 
       {%- endif -%}
     {% endfor %}
     <br>
@@ -91,13 +91,10 @@
 
 {% block content %}
 <article>
+  <p>Jump to <a href="#article">journals</a>, <a href="#inbook">books</a>, <a href="#misc">preprints</a></p>
+  {% set data = load_data(path="content/publications/paper.bib", format="bibtex") %}
   <section>
-    <!-- <h1 class="title">
-      {{ section.title }}
-    </h1> -->
-    {% set data = load_data(path="content/publications/paper.bib", format="bibtex") %}
     <h2>Conferences</h2>
-    <p>Jump to <a href="#article">journals</a>, <a href="#inbook">books</a>, <a href="#misc">preprints</a></p>
     <ul class="publist">
     {% for entry in data.bibliographies %}
       {% if entry.entry_type == "inproceedings" %}
@@ -105,7 +102,9 @@
       {% endif %}
     {% endfor %}
     </ul>
-    <a name="article"></a><h2>Journals</h2>
+  </section>
+  <section>
+      <a name="article"></a><h2>Journals</h2>
     <ul class="publist">
     {% for entry in data.bibliographies %}
       {% if entry.entry_type == "article" %}
@@ -113,6 +112,8 @@
       {% endif %}
     {% endfor %}
     </ul>
+  </section>
+  <section>
     <a name="inbook"></a><h2>Book chapters</h2>
     <ul class="publist">
     {% for entry in data.bibliographies %}
@@ -121,12 +122,15 @@
       {% endif %}
     {% endfor %}
     </ul>
+  </section>
+  {% set data = load_data(path="content/publications/preprint.bib", format="bibtex") %}
+  <section>
     <a name="misc"></a><h2>Preprints</h2>
     <ul class="publist">
     {% for entry in data.bibliographies %}
-      {% if entry.entry_type == "misc" %}
-        {{ self::print_entry(entry=entry) }}
-      {% endif %}
+      <!-- {% if entry.entry_type == "misc" %} -->
+      {{ self::print_entry(entry=entry) }}
+      <!-- {% endif %} -->
     {% endfor %}
     </ul>
   </section>
