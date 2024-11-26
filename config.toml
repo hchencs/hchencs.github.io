@@ -191,7 +191,7 @@ social_buttons = [
 navbar_items = [
     { url = "/", name = "Home" },
     { url = "/publications/", name = "Publications" },
-    { url = "/advice/", name = "Advice" },
+    { url = "/resources/", name = "Resources" },
     { url = "/cv/", name = "CV" },
 ]
 
