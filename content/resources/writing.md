@@ -1,8 +1,7 @@
 +++
-title = "Writing"
+title = "Advice on writing"
 page_template = "section.html"
 +++
-## Advice on writing
 
 ### Contents
 - Your paper should be easily comprehensible by its reviewers. They are far less familiar with your work than you. They may not be an expert on the topic and may not be able to afford much time on your paper.

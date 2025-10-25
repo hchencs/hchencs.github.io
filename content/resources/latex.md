@@ -1,9 +1,7 @@
 +++
-title = "LaTeX"
+title = "Advice on LaTeX"
 page_template = "section.html"
 +++
-
-## Advice on LaTeX
 
 - Use modern implementations of LaTeX to take advantage of Unicode and other useful features.
     - Use [LuaLaTeX](https://www.luatex.org/) instead of LaTeX or pdfLaTeX
