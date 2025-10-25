@@ -1,6 +1,6 @@
 +++
 title = "Writing"
-page_template = "page.html"
+page_template = "section.html"
 +++
 ## Advice on writing
 

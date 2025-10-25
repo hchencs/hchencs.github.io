@@ -1,6 +1,6 @@
 +++
 title = "Resources"
-page_template = "page.html"
+page_template = "section.html"
 +++
 
 ## Technical writing
@@ -24,3 +24,5 @@ page_template = "page.html"
 - [Operating Systems: Principles and Practice](https://ospp.cs.washington.edu/) [(Download)](https://www.kea.nu/files/textbooks/ospp/)
 - [The Elements of Statistical Learning: Data Mining, Inference, and Prediction (Second Edition)](https://hastie.su.domains/ElemStatLearn/)
 - [Computer Security](https://textbook.cs161.org/)
+- [All of Statistics](https://www.stat.cmu.edu/~brian/valerie/617-2022/0%20-%20books/2004%20-%20wasserman%20-%20all%20of%20statistics.pdf)
+- [Molecular Biology of the Cell](https://www.amazon.com/Molecular-Biology-Seventh-Bruce-Alberts-ebook/dp/B09J327GMT)

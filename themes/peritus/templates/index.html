@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <!-- Avatar section -->
+            <!-- <div class="avatar-section">
+                <img src="{{ get_url(path="avatar.jpg") }}" alt="{{ config.extra.name }}" class="avatar">
+            </div> -->
+
+            <!-- Bio section -->
+            <div class="bio-section">
+                <h1 class="name">{{ config.extra.name | default(value=config.title) }}</h1>
+                <h2 class="role">{{ config.extra.role }}</h2>
+                {% if config.extra.organization %}
+                <p class="organization">{{ config.extra.organization }}</p>
+                {% endif %}
+                {% if config.extra.membership %}
+                <p class="organization">{{ config.extra.membership }}</p>
+                {% endif %}
+
+                <div class="bio">
+                    <!-- <h3>About Me</h3>  -->
+                    <div>{{ section.content | safe }} </div>
+                </div>
+
+                <!-- Download CV button -->
+                <div class="cv-download">
+                    <a href="{{ config.extra.cv_url }}" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
+
+                <!-- Social links and Info sections horizontally aligned -->
+                <div class="social-info-section">
+                    <!-- Social links -->
+                    {% if config.extra.social %}
+                    <div class="social-links">
+                        {% for social in config.extra.social %}
+                        <a href="{{ social.url }}" target="_blank" aria-label="{{ social.name }}">
+                            <i class="{{ social.icon }}"></i>
+                        </a>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
