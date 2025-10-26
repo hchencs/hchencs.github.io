@@ -1,8 +1,8 @@
 # <customize>
 # The URL the site will be built for
 base_url = "https://haochen.org"
-title = "JC STEM Lab of Intelligent Cybersecurity - University of Hong Kong"
-description = "Our lab conducts research in computer and information security and machine learning."
+title = "Chen, Hao"
+description = "Professional site"
 # </customize>
 
 # Whether to automatically compile all Sass files in the sass directory
