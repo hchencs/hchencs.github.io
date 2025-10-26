@@ -5,32 +5,46 @@
     <div class="container">
         <div class="hero-content">
             <!-- Avatar section -->
-            <!-- <div class="avatar-section">
-                <img src="{{ get_url(path="avatar.jpg") }}" alt="{{ config.extra.name }}" class="avatar">
-            </div> -->
+            {% if config.extra.avatar %}
+            <div class="avatar-section">
+                <img src="{{ config.extra.avatar }}" alt="{{ config.extra.name }}" class="avatar">
+            </div>
+            {% endif %}
 
             <!-- Bio section -->
             <div class="bio-section">
-                <h1 class="name">{{ config.extra.name | default(value=config.title) }}</h1>
+                <!-- Display either banner or name -->
+                {% if config.extra.banner %}
+                <img src="{{ config.extra.banner }}" alt="{{ config.extra.banner_name }}" class="banner">
+                {% elif config.extra.name %}
+                <h1 class="name">{{ config.extra.name }}</h1>
+                {% endif %}
+                {% if config.extra.role %}
                 <h2 class="role">{{ config.extra.role }}</h2>
+                {% endif %}
                 {% if config.extra.organization %}
                 <p class="organization">{{ config.extra.organization }}</p>
                 {% endif %}
                 {% if config.extra.membership %}
-                <p class="organization">{{ config.extra.membership }}</p>
+                <p class="membership">{{ config.extra.membership }}</p>
                 {% endif %}
-
+                {% if config.extra.address %}
+                <p class="address"><i class="fas fa-envelope"></i> {{ config.extra.address }}</p>
+                {% endif %}
+                
                 <div class="bio">
                     <!-- <h3>About Me</h3>  -->
-                    <div>{{ section.content | safe }} </div>
+                    <div>{{ section.content | safe }}</div>
                 </div>
 
                 <!-- Download CV button -->
+                {% if config.extra.cv %}
                 <div class="cv-download">
-                    <a href="{{ config.extra.cv_url }}" class="btn btn-primary" target="_blank">
+                    <a href="{{ config.extra.cv }}" class="btn btn-primary" target="_blank">
                         <i class="fas fa-download"></i> Download CV
                     </a>
                 </div>
+                {% endif %}
 
                 <!-- Social links and Info sections horizontally aligned -->
                 <div class="social-info-section">

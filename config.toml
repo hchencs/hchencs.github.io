@@ -1,27 +1,41 @@
+# <customize>
 # The URL the site will be built for
-base_url = "https://haochen.org"
+base_url = "https://haochen"
+title = "JC STEM Lab of Intelligent Cybersecurity - University of Hong Kong"
+description = "Our lab conducts research in computer and information security and machine learning."
+# </customize>
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
-
-# The site title and description; they are used in feeds by default.
-title = "Chen, Hao"
-description = "Professional page"
 
 # Theme
 theme = "peritus"
 
 [extra]
-# Put all your custom variables here
+# Features to enable
+enable_dark_mode = true
+enable_search = false
 
-# Personal information
-# This is used to identify and highlight my name in the author lists.
-name = "Chen, Hao"
+# <customize>
+# Left avatar
+# avatar = ""
+# Top banner
+# banner = ""
+# Alt text of banner
+# banner_name = ""
+# If unset, use the default home icon
+# home_icon = ""
+
 role = "Professor"
-# organization = "University of California, Santa Barbara"
+organization = ""
 membership = "IEEE fellow; ACM distinguished member"
-email = "hchencs@gmail.com"
-cv_url = "pdf/cv.pdf"
+address = "hchencs AT gmail.com"
+cv = "pdf/cv.pdf"
+
+[extra.publication]
+prefix = ""
+# If author isn't empty, then highlight him/her in the author list.
+author = "Chen, Hao"
 
 [[extra.menu]]
 name = "Publications"
@@ -34,11 +48,6 @@ url = "/resources/"
 weight = 2
 
 [[extra.social]]
-name = "Email"
-url = "mailto:hchencs@gmail.com"
-icon = "fas fa-envelope"
-
-[[extra.social]]
 name = "Google Scholar"
 url = "https://scholar.google.com/citations?user=1Aa3qxIAAAAJ"
 icon = "ai ai-google-scholar"
@@ -48,9 +57,7 @@ name = "ORCID"
 url = "https://orcid.org/0000-0002-4072-0710"
 icon = "ai ai-orcid" 
 
-# Features to enable
-enable_dark_mode = true
-enable_search = false
+# </customize>
 
 # Color theme configuration
 [extra.colors]
