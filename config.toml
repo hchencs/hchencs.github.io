@@ -26,6 +26,7 @@ enable_search = false
 # If unset, use the default home icon
 # home_icon = ""
 
+name = "Chen, Hao"
 role = "Professor"
 organization = ""
 membership = "IEEE fellow; ACM distinguished member"
