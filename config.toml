@@ -17,16 +17,10 @@ enable_dark_mode = true
 enable_search = false
 
 # <customize>
-# Left avatar
-# avatar = ""
-# Top banner
-# banner = ""
-# Alt text of banner
-# banner_name = ""
-# If unset, use the default home icon
+# Either home_icon or home_text must be set.
 # home_icon = ""
+home_text = "Chen, Hao"
 
-name = "Chen, Hao"
 role = "Professor"
 organization = ""
 membership = "IEEE fellow; ACM distinguished member"
